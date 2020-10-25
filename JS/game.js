@@ -11,12 +11,6 @@ let box = 32;
 
 let score = 0;
 
-function drawGame () {
-	ctx.drawImage(ground, 0, 0)
-	// body...
-}
-
-
 
 let food = {
 	x: Math.floor((Math.random() * 17 + 1 ))* box,
@@ -41,6 +35,8 @@ function direction() {
 		dir = 'right';
 	else if (event.keyCode == 40 && dir !='up')
 		dir = 'down';
+
+	event.preventDefault();
 }
 
 function drawGame() {
